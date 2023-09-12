@@ -33,13 +33,13 @@ since it is also deployed to my personal AWS (IP 54.80.105.153) to simplify
 testing of the data pipeline from anywhere.
 
 ##Endpoints
-1. `POST http://54.80.105.153:8000/api/stock-data`
+1. `POST` http://54.80.105.153:8000/api/stock-data
    1. this endpoint will insert new historical stock data.
    2. `payload`: historical stock data in `JSON`. 
-2. `GET http://54.80.105.153:8000/api/stock-data`
+2. `GET` http://54.80.105.153:8000/api/stock-data
    1. this endpoint will retrieve historical stock data.
    2. `param`: start_date. e.g. `"2023-09-01"` (optional).
-3. `POST http://54.80.105.153:8000/api/stock-data/reset`
+3. `POST` http://54.80.105.153:8000/api/stock-data/reset
    1. this endpoint will delete all raw stock data that have been uploaded to this api.
    2. `payload`: -
 
