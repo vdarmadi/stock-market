@@ -32,8 +32,7 @@ It is optional to install API on your local machine
 since it is also deployed to my personal AWS (IP 54.80.105.153) to simplify 
 testing of the data pipeline from anywhere.
 
-
-##Endpoints
+## Endpoints
 1. `POST` http://54.80.105.153:8000/api/stock-data
    1. this endpoint will insert new historical stock data.
    2. `payload`: historical stock data in `JSON`. 
@@ -49,11 +48,11 @@ testing of the data pipeline from anywhere.
 2. pip 19.0.3
 3. venv
 
-##Files
+## Files
 1. `stock-market/api/*`:
    all files related to API creation (using Django framework).
    
-##Steps to install API locally
+## Steps to install API locally
    1. install `python3`, `venv`, `pip`
    2. run `python3 -m venv stock-market_env`
    3. run `source stock-market_env/bin/activate`
