@@ -32,6 +32,7 @@ It is optional to install API on your local machine
 since it is also deployed to my personal AWS (IP 54.80.105.153) to simplify 
 testing of the data pipeline from anywhere.
 
+
 ##Endpoints
 1. `POST` http://54.80.105.153:8000/api/stock-data
    1. this endpoint will insert new historical stock data.
