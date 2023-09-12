@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-from stock.views import StockDataListCreate
+from stock.views import StockDataListCreate, StockDataReset
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^api/stock-data$', StockDataListCreate.as_view()),
+    re_path(r'^api/stock-data/reset$', StockDataReset.as_view()),
 ]

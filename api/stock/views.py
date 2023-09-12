@@ -2,6 +2,7 @@ from django.db.models import Q
 from django.utils.dateparse import parse_date
 from rest_framework import generics, status
 from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK
 
 from stock.models import StockPrice
 from stock.serializers import StockPriceSerializer
@@ -35,3 +36,10 @@ class StockDataListCreate(generics.ListCreateAPIView):
 
         serializer = StockPriceSerializer(stock_data, many=True)
         return Response(serializer.data)
+
+
+class StockDataReset(generics.CreateAPIView):
+
+    def post(self, request, format=None):
+        StockPrice.objects.all().delete()
+        return Response(status=HTTP_200_OK, data={'message': "All records deleted"})
